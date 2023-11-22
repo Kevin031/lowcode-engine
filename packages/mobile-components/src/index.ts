@@ -1,2 +1,4 @@
-export { default as KtButton } from "./button";
-export { default as KtText } from "./text";
+export { default as KtButton } from "./components/button";
+export { default as KtText } from "./components/text";
+export { default as KtFlexBox } from "./components/flex-box";
+export { default as KtRenderer } from "./components/renderer";
