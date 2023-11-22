@@ -1,0 +1,6 @@
+packages:
+  - packages/*
+  - mobile-renderer
+  - page-editor
+  # exclude packages
+  - "!**/test/**"
