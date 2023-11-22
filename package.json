@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:render": "cd mobile-renderer && npm run dev:h5"
+    "dev:render": "cd mobile-renderer-app && npm run dev:h5"
   },
   "keywords": [],
   "author": "",

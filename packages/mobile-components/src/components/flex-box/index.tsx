@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import cx from "classnames";
-import { KtBaseProps } from "../../base/component-base";
+import { KtBaseProps, register } from "../../base/component-base";
 
 interface KtFlexBoxProps extends KtBaseProps {
   /**
@@ -15,7 +15,7 @@ function FlexBox(props: KtFlexBoxProps) {
     <View
       className={cx(props.className, "kt-flex-box")}
       style={props.style}
-      data-key={props.code}
+      {...props.meta}
     >
       {props.children}
     </View>
@@ -24,4 +24,6 @@ function FlexBox(props: KtFlexBoxProps) {
 
 FlexBox.defaultProps = {};
 
-export default FlexBox;
+export default register({
+  name: "KtFlexBox",
+})(FlexBox);

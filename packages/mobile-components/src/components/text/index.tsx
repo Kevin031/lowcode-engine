@@ -1,6 +1,6 @@
-import { Text } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import cx from "classnames";
-import { KtBaseProps } from "../../base/component-base";
+import { KtBaseProps, register } from "../../base/component-base";
 
 interface KtTextProps extends KtBaseProps {
   children: string | React.ReactNode;
@@ -8,13 +8,13 @@ interface KtTextProps extends KtBaseProps {
 
 function KtText(props: KtTextProps) {
   return (
-    <Text
+    <View
       className={cx(props.className, "kt-text")}
       style={props.style}
-      data-key={props.code}
+      {...props.meta}
     >
-      {props.children}
-    </Text>
+      <Text>{props.children}</Text>
+    </View>
   );
 }
 
@@ -22,4 +22,6 @@ KtText.defaultProps = {
   children: "",
 };
 
-export default KtText;
+export default register({
+  name: "KtText",
+})(KtText);

@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import cx from "classnames";
-import { KtBaseProps } from "../../base/component-base";
+import { KtBaseProps, register } from "../../base/component-base";
 
 interface KtButtonProps extends KtBaseProps {
   /**
@@ -30,7 +30,7 @@ function KtButton(props: KtButtonProps) {
         `kt-button-${props.size}`,
       )}
       style={props.style}
-      data-key={props.code}
+      {...props.meta}
     >
       <View>{props.children}</View>
     </View>
@@ -43,4 +43,6 @@ KtButton.defaultProps = {
   size: "middle",
 };
 
-export default KtButton;
+export default register({
+  name: "KtButton",
+})(KtButton);

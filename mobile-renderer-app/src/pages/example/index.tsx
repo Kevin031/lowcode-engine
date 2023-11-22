@@ -1,10 +1,10 @@
 import { View } from "@tarojs/components";
-import {
-  KtButton,
-  KtText,
-  KtFlexBox,
-  KtRenderer,
-} from "@kt-lowcode-engine/mobile-components";
+// import {
+//   KtButton,
+//   KtText,
+//   KtFlexBox,
+// } from "@kt-lowcode-engine/mobile-components";
+import KtRenderer from "@kt-lowcode-engine/mobile-renderer";
 
 const rendererData = {
   components: {

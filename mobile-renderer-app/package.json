@@ -38,6 +38,7 @@
   "dependencies": {
     "@babel/runtime": "^7.21.5",
     "@kt-lowcode-engine/mobile-components": "workspace:^",
+    "@kt-lowcode-engine/mobile-renderer": "workspace:^",
     "@tarojs/components": "3.6.18",
     "@tarojs/helper": "3.6.18",
     "@tarojs/plugin-framework-react": "3.6.18",
